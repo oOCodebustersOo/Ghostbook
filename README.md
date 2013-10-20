@@ -9,7 +9,7 @@ Team Codebusters
 
 Installation 
 ------------
-Verzeichnis kopieren und die Requirements installieren.
+Verzeichnis kopieren, die Requirements installieren und DB erstellen.
 
 Funktionsweise 
 --------------
