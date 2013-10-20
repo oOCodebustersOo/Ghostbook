@@ -1,0 +1,54 @@
+@darkblue: #3b5998;
+@light_text: #999999;
+@medium_text: #666666; 	
+@dark_text:	#333333;
+@white: #FFFFFF;
+@black: #000000;
+@beige: rgb(237, 240, 245);
+@green: #228B22;
+
+@btn-borderColor: rgb(153, 153, 153);
+@btn-backroundColor: rgb(238, 238, 238);
+
+@btn-borderColorPrimary: rgb(91, 116, 168);
+@btn-backroundColorPrimary: rgb(41, 68, 126);
+
+.btn-fbStyle {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+
+	margin: 5px;
+	
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 11px;
+	border-radius: 0px;
+}
+
+.btn {
+	.btn-fbStyle;
+	background-color: @btn-backroundColor;
+	border-color: @btn-borderColor;
+	color: @black;
+}
+
+.btn-Primary {
+	.btn-fbStyle;
+	background-color: @btn-backroundColorPrimary;
+	border-color: @btn-borderColorPrimary;
+	color: @white;
+}
+
+.btn-success {
+	.btn-fbStyle;
+}
+.btn-danger {
+	.btn-fbStyle;
+}
+
+.btn-large {
+	font-size: 18px;
+}

@@ -1,0 +1,37 @@
+{% extends "base_contact.html" %}
+
+#{% block content %}
+
+
+
+<h2>Contacts</h2>
+
+<ul class = boo>
+  {% for contact in object_list %}
+    <li class="contact">{{ contact }}
+	<a href="{% url "contacts-edit" pk=contact.id %}">
+	<button type="submit" class="btn a btn-xs">edit</button></a>
+	<a href="{% url "contacts-sms" pk=contact.id %}"> 
+	<button type="submit" class="btn b btn-xs"> sms</button></a>
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="{% url "contacts-new" %}"><button type="submit" class="btn add btn-sm"> add contact</button></a>
+{% endblock %}
+
+{% if contact.id %}
+<h1>Edit Contact</h1>
+{% else %}
+<h1>Add Contact</h1>
+{% endif %}
+
+{% for contact in object_list %}
+    <li class="contact">
+      <a href="{{ contact.get_absolute_url }}">{{ contact }}</a>
+      (<a href="{% url "contacts-edit" pk=contact.id %}">edit</a>)
+    </li>
+{% endfor %}
+
+<form action="{{ action }}" method="POST">
+

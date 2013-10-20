@@ -1,0 +1,15 @@
+{% extends "base_contact.html" %}
+
+{% block content %}
+<h2>{{ contact }}</h2>
+
+<div class="input-group">
+<form class="col-lg-6" action="/contacts/sms_send/" method="post">
+{% csrf_token %}
+<label>SMS Senden</label>
+<input name="sms_nummer" class="form-control" value="{{ contact.number }}">
+<textarea maxlength="160" name="sms_text" class="form-control" placeholder="Hier kommt dein Text rein"></textarea>
+<button class="btn add" id="send" type="submit">Senden</button>
+</form>
+</div>
+{% endblock %}

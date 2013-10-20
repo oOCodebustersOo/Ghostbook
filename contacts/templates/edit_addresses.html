@@ -1,0 +1,26 @@
+{% extends "base_contact.html" %}
+
+{% block content %}
+
+<h2>Edit Addresses</h2>
+
+<p>Editing addresses for {{ contact }}</p>
+
+<form action="{% url "contacts-edit-addresses" pk=contact.id %}"
+      method="POST">
+    {% csrf_token %}
+    {{ form.management_form }}
+    {% for address_form in form %}
+
+        <ul>
+        {{ address_form.as_ul }}
+        </ul>
+
+    {% endfor %}
+
+    <input type="submit" value="Save" />
+</form>
+
+<a href="{% url "contacts-list" %}">back to list</a>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+@gray1: #292929;
+@gray2: #B0B0B0;
+@gray3: #828282;
+@black: #000000;
+
+h1 {
+  font-size: 40px;
+  color: @gray1;
+}
+h2 {
+  font-size: 10px;
+}
+h3 {
+  font-size: 10px;
+}
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.container {
+	color: #0000CD;
+	background-color: @gray2;
+	border-color: @gray3;
+	border-style: solid;
+	.rounded-corners;
+}
+
+.navbar {
+	color: #0000CD;
+	background-color: @gray2;
+	border-color: @black;
+	border-style: groove;
+	border-width: 3px;
+	margin-left: 10px;
+	margin-right: 10px;
+	.rounded-corners;
+
+}
+
+li {
+	color: @black;
+	font-size: 45px;
+
+}
+
+nav-item {
+	color: @black;
+	margin-left: 50px;
+	margin-right: 50px;
+}

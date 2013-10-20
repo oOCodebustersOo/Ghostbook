@@ -1,0 +1,6 @@
+Django==1.5.4
+argparse==1.2.1
+django-calendar-sms==2.1
+django-registration==1.0
+gdata==2.0.18
+wsgiref==0.1.2

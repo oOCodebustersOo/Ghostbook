@@ -1,0 +1,47 @@
+
+h1{color: #FFFFFF;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 15px;}
+
+h2 {
+  font-size: 25px;
+  margin-left: 15px;
+}
+h3 {
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+
+nav{ 
+  padding-top: 5px;
+  background-color: #3B5998; /* background color will be black for all browsers */
+}
+
+ul.boo {                      
+   list-style-image: url('img/Boo-icon.png');
+   padding: 30px;
+   margin-left: 40px;
+  }
+
+
+body{background-color: #F7F7F6;
+     
+     }
+
+.article{
+font-size: 15px;
+line-height: 30px;
+margin-left: 15px;
+
+}
+
+.btn-a{background-color:#DCE3E9;}
+
+
+button.add{
+background-color: #33CC66 ;
+font-weight: bold;
+}
+

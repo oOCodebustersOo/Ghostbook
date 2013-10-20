@@ -1,0 +1,42 @@
+
+{% load staticfiles %}
+<html>
+  <head>
+    <link href="{% static 'bootstrap-3.0.0-wip/dist/css/bootstrap.min.css' %}"
+          rel="stylesheet" media="screen">
+    <link href="{% static 'test.css' %}"
+          rel="stylesheet" media="screen">
+    <script src="{% static 'bootstrap-3.0.0-wip/dist/js/bootstrap.min.js' %}"></script>
+  </head>
+
+  <body>
+<!-- Navigation Bar -->
+<nav>
+  <h1>Ghostbook</h1>
+{% if user.is_authenticated %}
+<p class="navbar-text pull-left">Hallo {{ user.username }}, <a href="/accounts/logout/">Abmelden</a></p>
+{% endif %}
+</nav>
+<!-- Navigation Ends -->
+
+<article>
+    {% if user.is_authenticated %}
+    <br>
+    {% block content %}
+    {% endblock %}
+    {% else %}
+	<h2>Herzlich Willkommen beim Ghostbook</h2>
+	<h2> Melde dich bitte an oder bitte um Kontakt auf unserer: <a href="/calendarsms/">Kontaktseite</a> </h2>
+	{% endif %}
+</article>
+ 
+<footer>
+<br>
+<br>
+<p>--------------------</p>
+<p><a href="/">Startseite</a> {% if user.is_authenticated %}<a href="/accounts/logout/">Abmelden</a>{% else %}<a href="/accounts/login/">Anmelden</a> <a href="/accounts/register/">Registrieren</a>{% endif %}</p>
+<p>&copy; Codebusters</p>
+</footer>
+  
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "base_contact.html" %}
+
+{% block content %}
+
+<h2>{{ contact }}</h2>
+
+<p>Email: {{ contact.email }}</p>
+
+<ul>
+{% for address in contact.address_set.all %}
+   <li>{{ address.address }}<br/><br/>
+       {{ address.city }} {{ address.state }}<br/><br/>
+       {{ address.postal_code }}
+   </li>
+{% endfor %}
+</ul>
+<a href="{% url "contacts-list" %}">back to list</a>
+
+{% endblock %}
