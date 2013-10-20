@@ -6,8 +6,7 @@ Adressbuch (auf der Grundlage von Effective Django) mit Registration, SMS-Versan
 Autor: 
 Team Codebusters
 
-Installation:   
-Verzeichnis kopieren und die Requirements installieren.
+Installation: Verzeichnis kopieren und die Requirements installieren.
 
 Funktionsweise: 
 Es handelt sich um ein Adressbuch auf der Grundlage des Effective Django Tutorials.
