@@ -1,3 +1,10 @@
+This is a student project!!
+---------------------------
+
+Not for everyday use!
+---------------------
+
+
 Ghostbook
 =========
 
